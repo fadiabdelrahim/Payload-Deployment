@@ -181,6 +181,24 @@ The selected payload, a reverse TCP payload, is tailored for a scenario involvin
 
 <p align="center"><img src=images/Picture24.png></p>
 
+<div align="center">Use sysinfo to retrieve system information</div>
+
+<p align="center"><img src=images/Picture25.png></p>
+
+<div align="center">Use shell command to execute system commands directly on target machine</div>
+
+<p align="center"><img src=images/Picture26.png></p>
+
+<div align="center">Use whoami command to see user information</div>
+
+<p align="center"><img src=images/Picture27.png></p>
+
+<div align="center">Use dir command to view files on system</div>
+
+<p align="center"><img src=images/Picture28.png></p>
+<p align="center"><img src=images/Picture29.png></p>
+
+
 ## Preventative Measures
 
 - ***Investigate Email Content and Sender:*** Be cautious of unsolicited emails, especially those with links or attachments. Verify the sender's credibility and be skeptical of unexpected requests or offers.
