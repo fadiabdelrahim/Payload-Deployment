@@ -1,4 +1,6 @@
-# <p align="center"> Payload Deployment
+***DISCLAIMER:*** *This is intended for ethical hacking educational purpose. Performing hacking attempts on any computers that you do not own (without permission) is illegal! Do not attempt to gain access to devices that you do not own!*
+
+# <div align="center"> Payload Deployment</div>
 
 ## Introduction
 
@@ -6,7 +8,7 @@ In the ever-evolving landscape of cybersecurity, understanding and demonstrating
 
 ***Overview***
 
-The selected payload, a reverse TCP payload, is tailored for a scenario involving a fictitious dental research organization, "Advanced Dental Practice." This payload is designed to be embedded within an executable file named "AdvancedDentalResearchFindings.exe," which masquerades as a legitimate document pertinent to dental research. The primary aim is to gain remote access to a target machine, thereby exposing the susceptibilities that can be leveraged via social engineering tactics.
+The selected payload, a reverse TCP payload, is tailored for a scenario involving a fictitious dental research organization, "Advanced Dental Practice." This payload is designed to be embedded within an executable file named "AdvancedDentalResearchFindings.exe," which masquerades as a legitimate document applicable to dental research. The primary aim is to gain remote access to a target machine, thereby exposing the susceptibilities that can be leveraged via social engineering tactics.
 
 ## Choice of Payload
 
@@ -66,135 +68,80 @@ The selected payload, a reverse TCP payload, is tailored for a scenario involvin
 ## Step-by-Step Deployment
 
 ***Payload creation with msfvenom***
-
 <div align="center">Create the reverse TCP payload using msfvenom</div>
-
 <p align="center"><img src=images/Picture1.png></p>
 
 ---
 
 ***Use Python to create HTTP server to host the payload***
-
 <p align="center"><img src=images/Picture2.png></p>
 
 ---
 
 ***Setup a listener using msfconsole***
-
 <div align="center">Run msfconsole</div>
-
 <p align="center"><img src=images/Picture3.png></p>
-
 <div align="center">Use exploit/multi/handler</div>
-
 <p align="center"><img src=images/Picture4.png></p>
-
 <div align="center">Use show options command to display options required</div>
-
 <p align="center"><img src=images/Picture5.png></p>
-
 <div align="center">Set payload windows/meterpreter/reverse_tcp</div>
-
 <p align="center"><img src=images/Picture6.png></p>
-
 <div align="center">Use show options command to display required payload options</div>
-
 <p align="center"><img src=images/Picture7.png></p>
-
 <div align="center">Set lhost to 192.168.100.4 (Attacker VM IP)</div>
-
 <p align="center"><img src=images/Picture8.png></p>
-
 <div align="center">Use show options to display updated payload options</div>
-
 <p align="center"><img src=images/Picture9.png></p>
-
 <div align="center">Set lport to 5555 (port used in the payload)</div>
-
 <p align="center"><img src=images/Picture10.png></p>
-
 <div align="center">Use show options command to display updated payload options</div>
-
 <p align="center"><img src=images/Picture11.png></p>
-
 <div align="center">Run the exploit</div>
-
 <p align="center"><img src=images/Picture12.png></p>
 
 ---
 
 ***Use The Social-Engineer Toolkit (SET) to send the payload to target***
-
 <div align="center">Run SET and select option [1] Social-Engineering Attacks</div>
-
 <p align="center"><img src=images/Picture13.png></p>
-
 <div align="center">Select option [5] Mass Mailer Attack</div>
-
 <p align="center"><img src=images/Picture14.jpg></p>
-
 <div align="center">Select option [1] E-Mail Attack Single Email Address</div>
-
 <p align="center"><img src=images/Picture15.png></p>
-
 <div align="center">Select option [2] One-Time Use Email Template</div>
-
 <p align="center"><img src=images/Picture16.png></p>
-
 <div align="center">Fill in all the information for the email</div>
-
 <p align="center"><img src=images/Picture17.png></p>
 
 ---
 
 ***Target View***
-
 <div align="center">Email inbox view of target</div>
-
 <p align="center"><img src=images/Picture18.png></p>
-
 <div align="center">Email view with payload attached</div>
-
 <p align="center"><img src=images/Picture19.png></p>
-
 <div align="center">Target view after clicking link</div>
-
 <p align="center"><img src=images/Picture20.png></p>
-
 <div align="center">Pop-up message displays when clicking the download file indicating that the file is harmful. For this demonstration, we will select keep</div>
-
 <p align="center"><img src=images/Picture21.png></p>
-
 <div align="center">Next select open file</div>
-
 <p align="center"><img src=images/Picture22.png></p>
-
 <div align="center">Select Run</div>
-
 <p align="center"><img src=images/Picture23.png></p>
 
 ---
 
 ***Attacker View***
-
 <div align="center">Check listner in msfconsole for reverse TCP successful connection</div>
-
 <p align="center"><img src=images/Picture24.png></p>
-
 <div align="center">Use sysinfo to retrieve system information</div>
-
 <p align="center"><img src=images/Picture25.png></p>
-
 <div align="center">Use shell command to execute system commands directly on target machine</div>
-
 <p align="center"><img src=images/Picture26.png></p>
-
 <div align="center">Use whoami command to see user information</div>
-
 <p align="center"><img src=images/Picture27.png></p>
-
 <div align="center">Use dir command to view files on system</div>
-
 <p align="center"><img src=images/Picture28.png></p>
 <p align="center"><img src=images/Picture29.png></p>
 
@@ -212,3 +159,7 @@ The selected payload, a reverse TCP payload, is tailored for a scenario involvin
 ## Conclusion
 
 This project provided parctical insights into alternative methods for payload delivery. Hosting the payload on a python server and then using a phishing email to link this payload demonstrated a versatile approach to overcoming email security barriers. Successfully configuring a NAT network for the VMs and intergrating various tools (msfvenom, python http server, SET, and msfconsole) displayed the complexity and adaptability required in successfully deploying a payload.
+
+## Full Disclaimer
+
+*Any action and or activities related to the material contained within this repository is solely your responsibility. The misuse of the tools and information in this repo could result in criminal charges being brought against the person in question. The author will not be held responsible in the event any criminal charges are brought against any individuals misusing the tools and information in this repository for malicious purpose or to break the law.*
