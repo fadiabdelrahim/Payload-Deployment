@@ -8,7 +8,7 @@ In the ever-evolving landscape of cybersecurity, understanding and demonstrating
 
 ***Overview***
 
-The selected payload, a reverse TCP payload, is tailored for a scenario involving a fictitious dental research organization, "Advanced Dental Practice." This payload is designed to be embedded within an executable file named "AdvancedDentalResearchFindings.exe," which masquerades as a legitimate document applicable to dental research. The primary aim is to gain remote access to a target machine, thereby exposing the susceptibilities that can be leveraged via social engineering tactics.
+The selected payload, a reverse TCP payload, is tailored for a scenario involving a fictitious dental research organization, "Advanced Dental Practice." This payload is designed to be embedded within an executable file named "AdvancedDentalResearchFindings.exe," which masquerades as a legitimate document applicable to dental research. The primary aim is to gain remote access to a target machine, thereby exposing the vulnerabilites that can be leveraged via social engineering tactics.
 
 ## Choice of Payload
 
